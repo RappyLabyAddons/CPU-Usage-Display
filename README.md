@@ -1,11 +1,17 @@
 # **CPU Usage Display**
-> With this plugin you can add a new module to your screen which displays your current CPU usage.
+> With this plugin you can add two new modules to your screen which display your current CPU usage in percent and your amount of cores.
 
 ### Installation
 1. Press `Win` + `R`
 2. Paste this into the window that popped up: `%appdata%/.minecraft/LabyMod/addons-1.12` and press enter
 3. It should open your Labymod addon directory; Paste the [CPU-Usage-Display.jar](https://github.com/RappyTV/CPU-Usage-Display/releases/download/1.0.0/CPU-Usage-Display.jar) in there.
 4. Launch your Labymod client.
+
+### Config
+- "Is your CPU hyperthreading?" - You have to activate this if your CPU is hyperthreading or else the cores will not be shown correctly
+<br>
+
+[How to find out if my CPU is hyper-threading](https://www.techwalla.com/articles/how-to-tell-if-my-cpu-is-hyper-threading)
 
 If you have any problems with the addon/have update ideas, feel free to
 - Open an Issue [here](https://github.com/RappyTV/CPU-Usage-Display/issues/new/choose)

@@ -1,10 +1,10 @@
 {
   "uuid": "%uuid%",
-  "name": "CPU Usage Display",
-  "mainClass": "com.rappytv.cpudisplay.main.Main",
+  "name": "CPU Info",
+  "mainClass": "com.rappytv.cpuinfo.main.Main",
   "description": "This addon lets you add a new module called \"CPU Usage\" to your screen which displays your current CPU Usage in %",
-  "version": 1,
+  "version": 2,
   "author": "RappyTV#6969",
   "category": 1,
-  "icon": "https://cdn.discordapp.com/attachments/962708390805655593/974966193544904754/icon.png"
+  "icon": "https://cdn.discordapp.com/attachments/938944740920016916/991304102699081858/icon.png"
 }

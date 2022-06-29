@@ -1,37 +1,34 @@
-package com.rappytv.cpudisplay.modules;
+package com.rappytv.cpuinfo.modules.cpu;
 
+import com.rappytv.cpuinfo.main.Main;
+import com.rappytv.cpuinfo.modules.Category;
 import net.labymod.ingamegui.ModuleCategory;
-import net.labymod.ingamegui.ModuleCategoryRegistry;
 import net.labymod.ingamegui.moduletypes.SimpleModule;
 import net.labymod.settings.elements.ControlElement;
-
-import com.sun.management.OperatingSystemMXBean;
 import net.minecraft.util.ResourceLocation;
 
-import java.lang.management.ManagementFactory;
-
-public class CPUModule extends SimpleModule {
-
-    private final OperatingSystemMXBean os = (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
+public class CoreModule extends SimpleModule {
 
     @Override
     public String getDisplayName() {
-        return "CPU";
+        return "Cores";
     }
 
     @Override
     public String getDisplayValue() {
-        return ((int) (os.getSystemCpuLoad() * 100)) + "%";
+        int cores = Runtime.getRuntime().availableProcessors();
+        if(Main.hyper) cores /= 2;
+        return String.valueOf(cores);
     }
 
     @Override
     public String getDefaultValue() {
-        return String.valueOf(0);
+        return "4";
     }
 
     @Override
     public ControlElement.IconData getIconData() {
-        return new ControlElement.IconData(new ResourceLocation("cpu_usage/textures/icon.png"));
+        return new ControlElement.IconData(new ResourceLocation("cpuinfo/textures/modules/cores.png"));
     }
 
     @Override
@@ -39,17 +36,17 @@ public class CPUModule extends SimpleModule {
 
     @Override
     public String getSettingName() {
-        return "cpu_usage";
+        return "cpu_cores";
     }
 
     @Override
     public String getControlName() {
-        return "CPU Usage";
+        return "CPU Cores";
     }
 
     @Override
     public String getDescription() {
-        return "Displays the current CPU Usage on your screen.";
+        return "Displays the quantity of cores your CPU has.";
     }
 
     @Override
@@ -59,6 +56,6 @@ public class CPUModule extends SimpleModule {
 
     @Override
     public ModuleCategory getCategory() {
-        return ModuleCategoryRegistry.CATEGORY_INFO;
+        return new Category();
     }
 }
