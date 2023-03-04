@@ -1,4 +1,4 @@
-# **CPU Usage Display**
+# **CPU Usage Display [LabyMod 3]**
 > With this plugin you can add two new modules to your screen which display your current CPU usage in percent and your amount of cores.
 
 ### Installation
